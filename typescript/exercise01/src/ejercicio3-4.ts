@@ -1,4 +1,4 @@
-function greet(greeting:string = "Hi, how are you?"): string {
+function greet(greeting:string = "hola"): string {
     return greeting.toUpperCase();
 }
     
