@@ -1,0 +1,23 @@
+{
+  "name": "unit-test-jest",
+  "version": "1.0.0",
+  "description": "a proyect to do unit testing at jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --collect-coverage"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "es": "^0.8.0",
+    "jest": "^29.5.0",
+    "modules": "^0.4.0"
+  },
+  "dependencies": {
+    "commonjs": "^0.0.1"
+  }
+}
