@@ -1,7 +1,7 @@
 .App {
   height: 100vh;
   padding-top: 10px;
-  background-color: rgb(42, 99, 68);
+  background-color: rgb(80, 149, 111);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: whitesmoke;
   display: flex;
@@ -19,9 +19,6 @@
   justify-content: center;
 }
 
-.freecodecamp-logo {
-  height: 40px;
-}
 
 .contenedor-calculadora {
   width: 400px;
@@ -29,7 +26,7 @@
   padding: 14px;
   background-color: pink;
   border-radius: 30px;
-  border: 5px solid rgb(13, 65, 43);
+  border: 5px solid white
 }
 
 .fila {
