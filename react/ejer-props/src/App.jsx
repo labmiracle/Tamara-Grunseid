@@ -2,7 +2,7 @@ import "./App.css";
 import Title from "./components/title";
 import Text from "./components/Text";
 import List from "./components/List";
-import ListItem from "./components/ListItem";
+import Link from "./components/Link";
 
 function App() {
   return (
@@ -10,7 +10,9 @@ function App() {
       <Title> </Title>
       <Text> </Text>
       <List> </List>
-      <a href="https://react.dev/">React Docs</a>
+      <Link href="https://react.dev/" openInNewTab>
+        {"React Docs"}
+      </Link>
     </>
   );
 }
