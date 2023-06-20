@@ -1,17 +1,11 @@
-import { useState } from "react";
 import "./App.css";
+import CountButtons from "./components/CountButtons";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <h1>Ejercicio State</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <CountButtons> </CountButtons>
     </>
   );
 }
