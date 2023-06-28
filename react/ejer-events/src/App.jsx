@@ -1,6 +1,7 @@
 import "./App.css";
 import Button from "./components/button";
 import TextImput from "./components/TextImput";
+import ValueOnSelect from "./components/ValueOnSelect";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <h1>Ejercicio Events</h1>
       <Button />
       <TextImput />
+      <ValueOnSelect />
     </>
   );
 }
