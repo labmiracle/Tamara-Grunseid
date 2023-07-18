@@ -56,8 +56,29 @@ const totalMass = characters
   .reduce((acc, curr) => acc + curr, 0);
 console.log("FUNCION REDUCE 1.", totalMass);
 
-//// 2. Obtener la altura total de todos los caracteres
+// 2. Obtener la altura total de todos los caracteres
 const totalHeight = characters
   .map((character) => parseInt(character.height))
   .reduce((acc, curr) => acc + curr, 0);
 console.log("FUNCION REDUCE 2.", totalHeight);
+
+// 3. Obtener el número total de caracteres en todos los nombres de los personajes
+const totalNameCharacters = characters
+  .map((character) => character.name.length)
+  .reduce((acc, curr) => acc + curr, 0);
+console.log("FUNCION REDUCE 3.", totalNameCharacters);
+
+// 4. Obtener el número total de caracteres por color de ojos
+const eyeColorCharacterCount = characters.reduce((acc, curr) => {
+  const eyeColor = curr.eye_color;
+  const charactersCount = curr.name.length;
+
+  if (acc[eyeColor]) {
+    acc[eyeColor] += charactersCount;
+  } else {
+    acc[eyeColor] = charactersCount;
+  }
+
+  return acc;
+}, {});
+console.log("FUNCION REDUCE 4.", eyeColorCharacterCount);
