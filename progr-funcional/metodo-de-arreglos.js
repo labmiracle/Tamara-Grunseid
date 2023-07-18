@@ -49,7 +49,6 @@ console.log("FUNCION MAP 3.", nameHeightPairs);
 console.log("FUNCION MAP 4.", names);
 
 // FUNCION REDUCE
-
 // 1. Obtener la masa total de los personajes
 const totalMass = characters
   .map((character) => parseInt(character.mass))
@@ -82,3 +81,28 @@ const eyeColorCharacterCount = characters.reduce((acc, curr) => {
   return acc;
 }, {});
 console.log("FUNCION REDUCE 4.", eyeColorCharacterCount);
+
+//FUNCION FILTER
+// 1. Obtener personajes con masa superior a 100
+const massGreaterThan100 = characters.filter(
+  (character) => parseInt(character.mass) > 100
+);
+console.log("FUNCION FILTER 1.", massGreaterThan100);
+
+// 2. Obtener personajes con una altura inferior a 200
+const heightLessThan200 = characters.filter(
+  (character) => parseInt(character.height) < 200
+);
+console.log("FUNCION FILTER 2.", heightLessThan200);
+
+// 3. Obtener todos los personajes masculinos
+const maleCharacters = characters.filter(
+  (character) => character.gender === "male"
+);
+console.log("FUNCION FILTER 3.", maleCharacters);
+
+// 4. Obtener todos los personajes femeninos
+const femaleCharacters = characters.filter(
+  (character) => character.gender === "female"
+);
+console.log(femaleCharacters);
