@@ -129,3 +129,28 @@ const sortedByGender = characters.sort((a, b) =>
   a.gender.localeCompare(b.gender)
 );
 console.log("FUNCION SORT 4.", sortedByGender);
+
+//FUNCION EVERY
+// 1. ¿Todos los personajes tienen ojos azules?
+const allCharactersHaveBlueEyes = characters.every(
+  (character) => character.eye_color === "blue"
+);
+console.log("FUNCION EVERY 1.", allCharactersHaveBlueEyes);
+
+// 2. ¿Todos los personajes tienen una masa superior a 40?
+const allCharactersHaveMassGreaterThan40 = characters.every(
+  (character) => parseInt(character.mass) > 40
+);
+console.log("FUNCION EVERY 2.", allCharactersHaveMassGreaterThan40);
+
+// 3. ¿Todos los caracteres son más bajos que 200?
+const allCharactersAreShorterThan200 = characters.every(
+  (character) => parseInt(character.height) < 200
+);
+console.log("FUNCION EVERY 3.", allCharactersAreShorterThan200);
+
+// 4. ¿Todos los personajes son hombres?
+const allCharactersAreMale = characters.every(
+  (character) => character.gender === "male"
+);
+console.log("FUNCION EVERY 4.", allCharactersAreMale);
