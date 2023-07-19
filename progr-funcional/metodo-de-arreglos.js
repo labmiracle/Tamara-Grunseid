@@ -106,3 +106,26 @@ const femaleCharacters = characters.filter(
   (character) => character.gender === "female"
 );
 console.log(femaleCharacters);
+
+//FUNCION SORT
+// 1. Ordenar por nombre
+const sortedByName = characters.sort((a, b) => a.name.localeCompare(b.name));
+console.log("FUNCION SORT 1.", sortedByName);
+
+// 2. Ordenar por masa
+const sortedByMass = characters.sort(
+  (a, b) => parseInt(a.mass) - parseInt(b.mass)
+);
+console.log("FUNCION SORT 2.", sortedByMass);
+
+// 3. Ordenar por altura
+const sortedByHeight = characters.sort(
+  (a, b) => parseInt(a.height) - parseInt(b.height)
+);
+console.log("FUNCION SORT 3.", sortedByHeight);
+
+// 4. Ordenar por género
+const sortedByGender = characters.sort((a, b) =>
+  a.gender.localeCompare(b.gender)
+);
+console.log("FUNCION SORT 4.", sortedByGender);
