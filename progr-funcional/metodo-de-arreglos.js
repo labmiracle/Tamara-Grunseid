@@ -154,3 +154,28 @@ const allCharactersAreMale = characters.every(
   (character) => character.gender === "male"
 );
 console.log("FUNCION EVERY 4.", allCharactersAreMale);
+
+//FUNCION SOME
+// 1. ¿Hay al menos un personaje masculino?
+const atLeastOneMaleCharacter = characters.some(
+  (character) => character.gender === "male"
+);
+console.log("FUNCION SOME 1.", atLeastOneMaleCharacter);
+
+// 2. ¿Hay al menos un personaje con ojos azules?
+const atLeastOneCharacterWithBlueEyes = characters.some(
+  (character) => character.eye_color === "blue"
+);
+console.log("FUNCION SOME 2.", atLeastOneCharacterWithBlueEyes);
+
+// 3. ¿Hay al menos un personaje más alto que 200?
+const atLeastOneCharacterTallerThan200 = characters.some(
+  (character) => parseInt(character.height) > 200
+);
+console.log("FUNCION SOME 3.", atLeastOneCharacterTallerThan200);
+
+// 4. ¿Hay al menos un personaje que tenga una masa inferior a 50?
+const atLeastOneCharacterWithMassLessThan50 = characters.some(
+  (character) => parseInt(character.mass) < 50
+);
+console.log("FUNCION SOME 4.", atLeastOneCharacterWithMassLessThan50);
