@@ -56,4 +56,15 @@ class LinkedList {
     }
     return count;
   }
+
+  find(data) {
+    let current = this.head;
+    while (current) {
+      if (current.data === data) {
+        return current;
+      }
+      current = current.next;
+    }
+    return null;
+  }
 }
