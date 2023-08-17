@@ -23,7 +23,27 @@ class LinkedList {
       }
       current.next = node;
     }
-
     this.size++;
+  }
+
+  remove(value) {
+    let current = this.head;
+    if (!current) {
+      return;
+    }
+    let previous;
+    while (current && current.data !== value) {
+      previous = current;
+      current = current.next;
+    }
+    if (!current) {
+      return;
+    }
+    if (!previous) {
+      this.head = current.next;
+    } else {
+      previous.next = current.next;
+    }
+    this.size--;
   }
 }
