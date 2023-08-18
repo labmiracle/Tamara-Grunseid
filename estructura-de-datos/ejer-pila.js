@@ -18,3 +18,20 @@ class Stack {
     return this.items.length;
   }
 }
+
+function decimalToBinary(decimalNumber) {
+  const stack = new Stack();
+
+  while (decimalNumber > 0) {
+    const remainder = decimalNumber % 2;
+    stack.push(remainder);
+    decimalNumber = Math.floor(decimalNumber / 2);
+  }
+
+  let binaryString = "";
+  while (stack.size() > 0) {
+    binaryString += stack.pop();
+  }
+
+  return binaryString;
+}
