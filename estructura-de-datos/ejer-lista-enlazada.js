@@ -82,6 +82,23 @@ class LinkedList {
 
     this.head = prev;
   }
+
+  deleteDups() {
+    let current = this.head;
+
+    while (current) {
+      let runner = current;
+      while (runner.next) {
+        if (runner.next.data === current.data) {
+          runner.next = runner.next.next;
+          this.size--;
+        } else {
+          runner = runner.next;
+        }
+      }
+      current = current.next;
+    }
+  }
 }
 
 class DoubleNode extends Node {
