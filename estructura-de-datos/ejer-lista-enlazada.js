@@ -83,3 +83,55 @@ class LinkedList {
     this.head = prev;
   }
 }
+
+class DoubleNode extends Node {
+  constructor(data, prev = null, next = null) {
+    super(data, next);
+    this.prev = prev;
+  }
+}
+
+class DoubleLinkedList extends LinkedList {
+  constructor() {
+    super();
+  }
+
+  add(data) {
+    let node = new DoublyNode(data);
+    if (!this.head) {
+      this.head = node;
+    } else {
+      let current = this.head;
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = node;
+      node.prev = current;
+    }
+    this.size++;
+  }
+
+  remove(value) {
+    let current = this.head;
+    if (!current) {
+      return;
+    }
+    let previous;
+    while (current && current.data !== value) {
+      previous = current;
+      current = current.next;
+    }
+    if (!current) {
+      return;
+    }
+    if (!previous) {
+      this.head = current.next;
+    } else {
+      previous.next = current.next;
+    }
+    if (current.next) {
+      current.next.prev = previous;
+    }
+    this.size--;
+  }
+}
