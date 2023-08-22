@@ -19,19 +19,24 @@ class Stack {
   }
 }
 
-function decimalToBinary(decimalNumber) {
+function decimalToBase(decimalNumber, base) {
+  if (base < 2 || base > 36) {
+    return "Base no válida. Debe estar entre 2 y 36.";
+  }
+
   const stack = new Stack();
+  const digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   while (decimalNumber > 0) {
-    const remainder = decimalNumber % 2;
-    stack.push(remainder);
-    decimalNumber = Math.floor(decimalNumber / 2);
+    const remainder = decimalNumber % base;
+    stack.push(digits[remainder]);
+    decimalNumber = Math.floor(decimalNumber / base);
   }
 
-  let binaryString = "";
+  let result = "";
   while (stack.size() > 0) {
-    binaryString += stack.pop();
+    result += stack.pop();
   }
 
-  return binaryString;
+  return result;
 }
